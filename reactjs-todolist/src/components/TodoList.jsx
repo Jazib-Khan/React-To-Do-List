@@ -2,7 +2,8 @@ import React from 'react'
 import TodoCard from './TodoCard'
 
 export default function TodoList(props) {
-    const { todos } = props
+    const { todos } = props // destructuring the props object
+
 
     return (
         <ul className='main'>
