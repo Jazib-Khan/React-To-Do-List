@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import TodoInput from "./components/TodoInput"
 import TodoList from "./components/TodoList"
 
@@ -9,7 +9,6 @@ function App() {
   function persistData(newList) {
     localStorage.setItem('todos', JSON.stringify({ todos: newList })) // localStorage is a property that allows you to access a Storage object for the Document's origin; JSON.stringify() converts a JavaScript object or value to a JSON string
   }
-  
   
   function handleAddTodos(newTodo) {
     const newTodoList = [...todos, newTodo]
